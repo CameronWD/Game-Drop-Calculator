@@ -1,0 +1,1 @@
+{"KBD": {"name": "KBD", "kill_attempts": 100, "items_dropped": {"Shield": {"count": 0, "drop_rate": 512.0}}}, "Queen": {"name": "Queen", "kill_attempts": 150, "items_dropped": {"shield": {"count": 1, "drop_rate": 500.0}}}, "4": {"name": "4", "kill_attempts": 4, "items_dropped": {"4": {"count": 4, "drop_rate": 4.0}}}}
