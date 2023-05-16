@@ -40,15 +40,6 @@ class MainMenu:
     def display_boss_stats(self):
         DisplayBossStats(self.boss_records).execute()
         pass
-    # def display_boss_stats(self):
-    #     DisplayBossStats(self).execute()
-
-# ## write this way
-#     def calculate_drop_change(self):
-#         Dropcalculator(self).exectue()
-
-
-# safe_input is used for error handling and ensuring the user inputs the correct type of data
         
     def exit_program(self):
         print("Thank you for using Drop Chance Calculator!")
