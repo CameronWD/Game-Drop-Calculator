@@ -35,6 +35,9 @@ class MainMenu:
         DisplayBossStats.execute(self)
         pass
 
+
+# safe_input is used for error handling and ensuring the user inputs the correct type of data
+
     def safe_input(self, prompt, conversion_func=None):
         readable_error = {
             'int': 'numbers',

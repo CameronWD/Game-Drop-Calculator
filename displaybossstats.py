@@ -4,8 +4,9 @@ from termcolor import cprint
 class DisplayBossStats:
     @staticmethod
     def execute(menu):
-        table = PrettyTable(["Boss", "Kill count", "Total drops"])
 
+        # Creates a table that has each boss, the kill count and the total number of drops
+        table = PrettyTable(["Boss", "Kill count", "Total drops"])
         for boss in menu.boss_records.values():
             total_drops = sum(item['count'] for item in boss.items_dropped.values())
             table.add_row([boss.name, boss.kill_attempts, total_drops])
