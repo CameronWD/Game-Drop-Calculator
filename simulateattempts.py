@@ -1,4 +1,5 @@
 import random
+from tqdm import tqdm
 
 class SimulateAttempts:
     @staticmethod
@@ -17,7 +18,7 @@ class SimulateAttempts:
         simulated_successful_occurrences = int(input("Simulated successful occurrences (1-1000):\n"))
         
         attempts_per_success = []
-        for _ in range(simulated_successful_occurrences):
+        for _ in tqdm(range(simulated_successful_occurrences)):
             attempts = 0
             while random.random() >= drop_rate:
                 attempts += 1
