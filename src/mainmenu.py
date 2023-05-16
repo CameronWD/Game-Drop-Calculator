@@ -1,8 +1,8 @@
 import json
-from boss import Boss
-from simulateattempts import SimulateAttempts
+from boss import BossStore
+from simulateattempts import AttemptSimulator
 from storebossstats import StoreBossStats
-from displaybossstats import DisplayBossStats
+from displaybossstats import BossStatDisplayer
 from dropcalculator import DropCalculator
 from termcolor import cprint
 from inpututil import safe_input
@@ -27,7 +27,7 @@ class MainMenu:
         DropCalculator(self).calculate()
 
     def simulate_attempts(self):
-        SimulateAttempts(self).calculate()
+        AttemptSimulator(self).calculate()
         pass
 
     def store_boss_stats(self):
@@ -35,11 +35,7 @@ class MainMenu:
         pass
 
     def display_boss_stats(self):
-        DisplayBossStats.execute(self)
-        pass
-
-    def display_boss_stats(self):
-        DisplayBossStats(self.boss_records).execute()
+        BossStatDisplayer(self.boss_records).execute()
         pass
         
     def exit_program(self):
@@ -51,7 +47,7 @@ class MainMenu:
         try:
             with open('boss_stats.json', 'r') as file:
                 try:
-                    self.boss_records.update({key: Boss.from_dict(value) for key, value in json.load(file).items()})
+                    self.boss_records.update({key: BossStore.from_dict(value) for key, value in json.load(file).items()})
                 except json.decoder.JSONDecodeError:
                     print("Warning: boss_stats.json is empty or not properly formatted. Will create a new one now.")
 

@@ -1,5 +1,5 @@
 import json
-from boss import Boss
+from boss import BossStore
 from inpututil import safe_input
 
 class StoreBossStats:
@@ -19,7 +19,7 @@ class StoreBossStats:
             items_dropped[item_name] = {'count': item_count, 'drop_rate': item_drop_rate}
         save = safe_input("Save? Y/N\n")
         if save.lower() == 'y':
-            boss_instance = Boss(boss_name, kill_attempts, items_dropped)
+            boss_instance = BossStore(boss_name, kill_attempts, items_dropped)
             self.main.boss_records[boss_name] = boss_instance
             with open('boss_stats.json', 'w') as file:
                 json.dump({key: value.to_dict() for key, value in self.main.boss_records.items()}, file)

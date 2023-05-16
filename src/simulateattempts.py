@@ -3,7 +3,7 @@ from tqdm import tqdm
 from termcolor import cprint
 from inpututil import safe_input
 
-class SimulateAttempts:
+class AttemptSimulator:
     def __init__(self, MainMenu):
         self.menu = MainMenu
 

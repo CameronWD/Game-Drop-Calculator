@@ -1,7 +1,7 @@
 from prettytable import PrettyTable
 from termcolor import cprint
 
-class DisplayBossStats:
+class BossStatDisplayer:
     def __init__(self, boss_records):
         self.boss_records = boss_records
 
