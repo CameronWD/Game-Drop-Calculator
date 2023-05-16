@@ -1,10 +1,10 @@
-    
 import json
 from boss import Boss
 from simulateattempts import SimulateAttempts
 from storebossstats import StoreBossStats
 from displaybossstats import DisplayBossStats
-from termcolor import colored, cprint
+from termcolor import cprint
+from inpututil import safe_input
 
 class MainMenu:
     def __init__(self):
@@ -19,9 +19,7 @@ class MainMenu:
         cprint("5. Exit", "red")
         cprint("Type 'exit' at any time to exit the program.", 'dark_grey')
         cprint("Type 'menu' at any time to return to the main menu.", "dark_grey")
-        return self.safe_input("What would you like to do? (enter number then press enter): \n", int)
-    
-    
+        return safe_input("What would you like to do? (enter number then press enter): \n", int)
     
     def simulate_attempts(self):
         SimulateAttempts.calculate()
@@ -37,38 +35,7 @@ class MainMenu:
 
 
 # safe_input is used for error handling and ensuring the user inputs the correct type of data
-
-    def safe_input(self, prompt, conversion_func=None):
-        readable_error = {
-            'int': 'numbers',
-            'float': 'numbers',
-            'str': 'text'
-        }
-
-        while True:
-            user_input = input(prompt)
-            if user_input.lower() == "exit":
-                self.exit_program()
-            elif user_input.lower() == "menu":
-                self.display()
-            elif conversion_func:
-                try:
-                    converted = conversion_func(user_input)
-                    if isinstance(converted, int) or isinstance(converted, float):
-                        if user_input.isnumeric():
-                            return converted
-                        else:
-                            print(f"Invalid input! - Please enter {readable_error[conversion_func.__name__]}.")
-                    else:
-                        if user_input.isalpha():
-                            return converted
-                        else: print(f"Invalid input! - Please enter {readable_error[conversion_func.__name__]} without special characters or numbers.")
-                except ValueError:
-                    print(f"Invalid input! - Please enter {readable_error[conversion_func.__name__]}.")
-            else:
-                return user_input
         
-    
     def exit_program(self):
         print("Thank you for using Drop Chance Calculator!")
         exit()
@@ -79,7 +46,7 @@ class MainMenu:
                 try:
                     self.boss_records.update({key: Boss.from_dict(value) for key, value in json.load(file).items()})
                 except json.decoder.JSONDecodeError:
-                    print("Warning: boss_stats.json is empty or not properly formatted. Continuing with an empty boss list.")
+                    print("Warning: boss_stats.json is empty or not properly formatted. Will create a new one now.")
 
         except FileNotFoundError:
             print("boss_stats.json not found. Creating a new file now.")

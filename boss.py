@@ -1,5 +1,3 @@
-import json
-
 class Boss:
     def __init__(self, name, kill_attempts=0, items_dropped=None):
         self.name = name
