@@ -6,7 +6,6 @@ class SimulateAttempts:
     @staticmethod
     def calculate():
         drop_rate = input("Drop rate (e.g. 0.01 for 1/100 or 100 for 1/100):\n")
-        # Convert input to float if in decimal format, otherwise calculate inverse
         try:
             drop_rate = float(drop_rate)
             if drop_rate > 1:

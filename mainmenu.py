@@ -6,7 +6,6 @@ from storebossstats import StoreBossStats
 from displaybossstats import DisplayBossStats
 from termcolor import colored, cprint
 
-
 class MainMenu:
     def __init__(self):
         self.boss_records = {}
