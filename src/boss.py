@@ -1,4 +1,4 @@
-class Boss:
+class BossStore:
     def __init__(self, name, kill_attempts=0, items_dropped=None):
         self.name = name
         self.kill_attempts = kill_attempts
@@ -13,7 +13,7 @@ class Boss:
 
     @staticmethod
     def from_dict(source):
-        return Boss(
+        return BossStore(
             source['name'],
             source.get('kill_attempts', 0),
             source.get('items_dropped', {})
