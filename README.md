@@ -3,11 +3,27 @@
 
 ## Introduction
 
+Welcome to my Python program, "Drop Chance Calculator". 
 
+Designed to provide simple and easy to use utility for gamers who frequently engage in boss fights where luck is an aspect of getting rewards. If you are someone who has wondered how lucky or unlucky you are currently, this program may provide you with some insight. 
+
+Before diving into the functionality of the program, it is important to clarify some terminologies and concepts that are frequent within the world of video games. 
+
+Kill count: This referes to the number of times a player has defeated a specific boss. This number is important to track as its relation to the odds of recieving certain items helps users gain insight into how lucky they are. 
+
+Drop: A drop is a broad term used for items that are recieved from a boss. Similar words like loot or rewards could also be used. 
+
+Drop rate: This is the probaiblity of a boss dropping a specific item when defeated. While many games have many differing mechanics surronding this certain assumptions have been made for drop rate calculations in this program. It is assumed that drop rate has no memory or 'bad luck' mechanic. Every kill attempt results in the same chance of recieving the drop. The fancier term being a series of Bernoulli trials. Often these rates can be given as a percentage or out 1/droprate, e.g 5%, 0.05 or 1/20.  Most games have a way to know what the drop rate of an item is. Which is really helpful for our purpose!
+
+What draws many gamers to video games is the aspect of chance and earning drops from particular bosses gives an element of earning rewards which can be a satisfying, albeit frustrating at times, gameplay loop. By comparing your kill count in relation to the drop rate and the number of items you have recieved, players are able to learn more about how lucky or unlucky they are. This program allows users to see what percentile of probability they are in relation to their kill count and the drop rate of a specific item. It allows users to simulate recieveing X amount of drops from a boss, displaying the average rate the program recieved drops in addition to the luckiest and unluckiest streaks. Finally, users can store their kill count, boss names, drop rate and succusful occurances too. 
+
+This program is desinged to be simple to use and a little bit of fun.
+
+Best of luck!
 
 ## System REquirments
 
-- OS - Any that can run Python (more niche OS's may have issues with certain packages running correctly but this should not effect funtionality)
+- OS: Any that can run Python (more niche OS's may have issues with certain packages running correctly, but this should not affect functionality).
 - Python 3
 
 ## Dependencies
@@ -21,14 +37,14 @@ This application requires the following Python packages:
 
 ## Installation
 
-1. Confirm that your system has Python 3.x or higher. You can download Python from X link if you do not have it installed. You can confirm your python version in the console by running the following command:
+1. Confirm that your system has Python 3.x or higher. You can download Python from [link](https://www.python.org/) if you do not have it installed. You can confirm your python version in the console by running the following command:
 
     ``` python3 --version ```
 2. Download or clone this respository to your local machine.
 
-3. Navigate to the location of the reposityory on your local system in the terminal. 
+3. Navigate to the location of the repository on your local system in the terminal.
 
-4. Install the Python packages that are required to run this program using pip. This will install the dependesicis listed in the requirments.txt file. 
+4. Install the Python packages that are required to run this program using pip. This will install the dependencies listed in the requirements.txt file. 
 
     ``` pip install -r requirments.txt ```
 
@@ -38,13 +54,13 @@ This application requires the following Python packages:
 
 ## How to use 
 
-After starting the application you are greeted with main menu screen. Entering the number that corropsonds with the feature you would like. 
+After starting the application, you are greeted with the main menu screen. Enter the number that corresponds with the feature you would like to use:
 
-1. **Calcualte Drop Chance:** This option asks you to enter the boss name, the drop rate and the amount of attempts you have had. You are then shown the drop rate chance per kill and the chance of being succusful once within the amount of attmeps you have had. 
-2. **Simulate Drop:** You can enter the name, drop rate and how many succusful attempts you would like for the program to simulate. The output displays a confirmation of the amount of succusful attempts the program ran. Displaying the lowest amount of attempts it took to be succusful as well as the most. Finally it displays the average drop rate for the simulation. 
-3. **Store Boss Stats:** You can enter the details for a boss including name, drop rate, kill attempts and differnt items. You can enter the individual drop rate for differnt items too. 
-4. **Display Boss Stats:** This function displays the entered boss data. It is presented in tables. One header table shows the different entered bosses with the kill counts on each one. The second group of tables shows the breakdown per boss. Breaking up individaul items withint he boss. 
-5. **Exit option.** Typing exit anywhere in the program will close the program. 
+1. **Calcualte Drop Chance:** This option asks you to enter the boss name, the drop rate, and the number of attempts you've made. You are then shown the drop rate chance per kill and the likelihood of being successful at least once within the number of attempts you have made.
+2. **Simulate Drop:** You can enter the name, drop rate, and the number of successful attempts you would like for the program to simulate. The output displays a confirmation of the number of successful attempts the program ran, the minimum and maximum number of attempts it took to be successful, and the average drop rate for the simulation.
+3. **Store Boss Stats:** You can enter the details for a boss, including name, drop rate, kill attempts, and different items. You can also enter the individual drop rate for different items.
+4. **Display Boss Stats:** This function displays the entered boss data in a tabular format. One header table shows the different entered bosses with the kill counts for each one. The second set of tables shows the breakdown per boss, separating individual items within the boss.
+5. **Exit option:** Typing 'exit' anywhere in the program will close it.
 
 ## Tests
 
