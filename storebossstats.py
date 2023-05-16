@@ -22,6 +22,4 @@ class StoreBossStats:
                 json.dump({key: value.to_dict() for key, value in main_menu.boss_records.items()}, file)
             print(f"Boss {boss_name} saved successfully.")
         input("Press any key to return to main menu\n")
-
-
-
+        

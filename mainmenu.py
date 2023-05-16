@@ -4,21 +4,25 @@ from boss import Boss
 from simulateattempts import SimulateAttempts
 from storebossstats import StoreBossStats
 from displaybossstats import DisplayBossStats
+from termcolor import colored, cprint
+
 
 class MainMenu:
     def __init__(self):
         self.boss_records = {}
-
+    
     def display(self):
-        print("Welcome to Drop Chance Calculator!")
-        print("Type 'exit' at any time to exit the program.")
-        print("Type 'menu' at any time to return to the main menu.")
-        print("1. Tell me my drop chance")
-        print("2. How lucky is this calculator?")
-        print("3. Store my boss stats")
-        print("4. List my boss stats")
-        print("5. Exit")
-        return self.safe_input("What would you like to do? (enter number then press enter)\n", int)
+        cprint("Welcome to the Drop Chance Calculator!", 'light_magenta', attrs=['bold', 'underline'])
+        cprint("1. Whats my chance of having a drop by now?", "light_green")
+        cprint("2. Simulate drop attempts", "light_cyan")
+        cprint("3. Store my boss stats", "light_blue")
+        cprint("4. List my boss stats", "light_yellow")
+        cprint("5. Exit", "red")
+        cprint("Type 'exit' at any time to exit the program.", 'dark_grey')
+        cprint("Type 'menu' at any time to return to the main menu.", "dark_grey")
+        return self.safe_input("What would you like to do? (enter number then press enter): \n", int)
+    
+    
     
     def simulate_attempts(self):
         SimulateAttempts.calculate()
@@ -61,20 +65,6 @@ class MainMenu:
                     print(f"Invalid input! - Please enter {readable_error[conversion_func.__name__]}.")
             else:
                 return user_input
-
-        # user_input = input(prompt)
-        # if user_input.lower() == "exit":
-        #     self.exit_program()
-        # if user_input.lower() == "menu":
-        #     self.display()
-        # elif conversion_func:
-        #     try:
-        #         return conversion_func(user_input)
-        #     except ValueError:
-        #         print(f"Invalid input! - Please enter a {conversion_func.__name__}.")
-        #         return None
-        # else:
-        #     return user_input
         
     
     def exit_program(self):

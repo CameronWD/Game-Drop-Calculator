@@ -1,9 +1,34 @@
+from tabulate import tabulate
+from prettytable import PrettyTable
+from termcolor import cprint
+
+# class DisplayBossStats:
+#     @staticmethod
+#     def execute(menu):
+#         for boss in menu.boss_records.values():
+#             print(f"\nBoss: {boss.name}, Kill count: {boss.kill_attempts}, Total drops: {sum(item['count'] for item in boss.items_dropped.values())}")
+#             for item, details in boss.items_dropped.items():
+#                 print(f"Item dropped: {item} - {details['count']}, Drop rate: {details['drop_rate']}")
+#         input("\nPress any key to return to the main menu\n")
+        
+from prettytable import PrettyTable
+
 class DisplayBossStats:
     @staticmethod
     def execute(menu):
+        table = PrettyTable(["Boss", "Kill count", "Total drops"])
+
         for boss in menu.boss_records.values():
-            print(f"\nBoss: {boss.name}, Kill count: {boss.kill_attempts}, Total drops: {sum(item['count'] for item in boss.items_dropped.values())}")
+            total_drops = sum(item['count'] for item in boss.items_dropped.values())
+            table.add_row([boss.name, boss.kill_attempts, total_drops])
+        cprint(table, "light_yellow")
+
+        # Create table for each boss's item drops
+        for boss in menu.boss_records.values():
+            cprint(f"\nBoss: {boss.name}, Kill count: {boss.kill_attempts}", "light_yellow", attrs=["bold"])
+            item_table = PrettyTable(["Item dropped", "Count", "Drop rate"])
             for item, details in boss.items_dropped.items():
-                print(f"Item dropped: {item} - {details['count']}, Drop rate: {details['drop_rate']}")
+                item_table.add_row([item, details['count'], details['drop_rate']])
+            cprint(item_table, "light_yellow")
+
         input("\nPress any key to return to the main menu\n")
-        

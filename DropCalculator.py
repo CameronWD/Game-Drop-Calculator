@@ -1,5 +1,7 @@
 
 from mainmenu import MainMenu
+from termcolor import cprint
+
 
 class DropCalculator:
     def __init__(self):
@@ -18,6 +20,6 @@ class DropCalculator:
         if attempts is None: return
 
         success_prob = 1 - (1 - drop_rate) ** attempts
-        print(f'There is a {drop_rate * 100:.3f}% chance per kill to receive the drop you want from {boss_name}')
-        print(f'After {attempts} attempts, you had a {success_prob * 100:.3f}% chance of being successful at least once.')
+        cprint(f'There is a {drop_rate * 100:.3f}% chance per kill to receive the drop you want from {boss_name}', 'light_green')
+        cprint(f'After {attempts} attempts, you had a {success_prob * 100:.3f}% chance of being successful at least once.', 'light_green')
         input("Press any key to return to main menu\n")

@@ -1,5 +1,6 @@
 import random
 from tqdm import tqdm
+from termcolor import cprint
 
 class SimulateAttempts:
     @staticmethod
@@ -28,7 +29,7 @@ class SimulateAttempts:
         max_attempts = max(attempts_per_success)
         avg_attempts = sum(attempts_per_success) / len(attempts_per_success)
 
-        print(f"Program successfully got the drop {simulated_successful_occurrences} times.")
-        print(f"The fewest attempts it took was {min_attempts} and the most attempts was {max_attempts}.")
-        print(f"Average attempts to be successful was: {avg_attempts:.3f}")
+        cprint(f"Program successfully got the drop {simulated_successful_occurrences} times.", 'light_cyan')
+        cprint(f"The fewest attempts it took was {min_attempts} and the most attempts was {max_attempts}.", 'light_cyan')
+        cprint(f"Average attempts to be successful was: {avg_attempts:.3f}", 'light_cyan')
         input("Press any key to return to main menu\n")
