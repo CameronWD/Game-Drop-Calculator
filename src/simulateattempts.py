@@ -6,8 +6,10 @@ from inpututil import safe_input
 
 class SimulateAttempts:
 
-    def calculate():
+    def __init__(self, MainMenu):
+        self.menu = MainMenu
 
+    def calculate(self):
         boss_name = safe_input("Boss name:\n")
 
         drop_rate = safe_input("Drop rate (e.g. 0.01 for 1/100 or 100 for 1/100):\n")

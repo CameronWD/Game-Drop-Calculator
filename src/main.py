@@ -1,17 +1,17 @@
 from mainmenu import MainMenu
-from DropCalculator import DropCalculator
+# from dropcalculator import DropCalculator
 
 def main():
     try:
         main_menu = MainMenu()
         main_menu.load_boss_records()
-        calculate = DropCalculator()
+        # calculate = DropCalculator()
 
         while True:
             choice = main_menu.display()
             if choice == 1:
                 #make execute method in DropCalculator
-                calculate.calculate()
+                main_menu.drop_calculator()
             elif choice == 2:
                 main_menu.simulate_attempts()
             elif choice == 3:

@@ -1,22 +1,23 @@
 
-from mainmenu import MainMenu
+# from mainmenu import MainMenu
 from termcolor import cprint
+from inpututil import safe_input
 
 
 class DropCalculator:
-    # def __init__(self):
-    #     self.menu = MainMenu
+    def __init__(self, MainMenu):
+        self.menu = MainMenu
 
     def calculate(self):
-        boss_name = self.menu.safe_input("Enter boss name:\n")
+        boss_name = safe_input("Enter boss name:\n")
         if boss_name is None: return
 
-        drop_rate = self.menu.safe_input("Enter drop rate (e.g. 0.01 or 100 for a 1/100 chance):\n", float)
+        drop_rate = safe_input("Enter drop rate (e.g. 0.01 or 100 for a 1/100 chance):\n", float)
         if drop_rate is None: return
         if drop_rate > 1:
             drop_rate = 1 / drop_rate
 
-        attempts = self.menu.safe_input("Enter number of attempts:\n", int)
+        attempts = safe_input("Enter number of attempts:\n", int)
         if attempts is None: return
 
         success_prob = 1 - (1 - drop_rate) ** attempts

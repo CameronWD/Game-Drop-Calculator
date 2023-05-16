@@ -3,6 +3,7 @@ from boss import Boss
 from simulateattempts import SimulateAttempts
 from storebossstats import StoreBossStats
 from displaybossstats import DisplayBossStats
+from dropcalculator import DropCalculator
 from termcolor import cprint
 from inpututil import safe_input
 
@@ -21,17 +22,26 @@ class MainMenu:
         cprint("Type 'menu' at any time to return to the main menu.", "dark_grey")
         return safe_input("What would you like to do? (enter number then press enter): \n", int)
     
+    def drop_calculator(self):
+        DropCalculator(self).calculate()
+
     def simulate_attempts(self):
-        SimulateAttempts.calculate()
+        SimulateAttempts(self).calculate()
         pass
 
     def store_boss_stats(self):
-        StoreBossStats.execute(self)
+        StoreBossStats(self).execute()
         pass
 
     def display_boss_stats(self):
         DisplayBossStats.execute(self)
         pass
+
+    def display_boss_stats(self):
+        DisplayBossStats(self.boss_records).execute()
+        pass
+    # def display_boss_stats(self):
+    #     DisplayBossStats(self).execute()
 
 # ## write this way
 #     def calculate_drop_change(self):

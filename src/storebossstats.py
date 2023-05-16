@@ -3,8 +3,10 @@ from boss import Boss
 from inpututil import safe_input
 
 class StoreBossStats:
-    @staticmethod
-    def execute(main_menu):
+    def __init__(self, MainMenu):
+        self.main = MainMenu
+
+    def execute(self):
         boss_name = safe_input("Boss name:\n")
         kill_attempts = int(input("How many kill attempts do you have?\n"))
         items_dropped = {}
@@ -18,9 +20,9 @@ class StoreBossStats:
         save = safe_input("Save? Y/N\n")
         if save.lower() == 'y':
             boss_instance = Boss(boss_name, kill_attempts, items_dropped)
-            main_menu.boss_records[boss_name] = boss_instance
+            self.main.boss_records[boss_name] = boss_instance
             with open('boss_stats.json', 'w') as file:
-                json.dump({key: value.to_dict() for key, value in main_menu.boss_records.items()}, file)
+                json.dump({key: value.to_dict() for key, value in self.main.boss_records.items()}, file)
             print(f"Boss {boss_name} saved successfully.")
         safe_input("Press any key to return to main menu\n")
         
