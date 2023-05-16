@@ -3,13 +3,6 @@ from tqdm import tqdm
 from termcolor import cprint
 from inpututil import safe_input
 
-
-import random
-from tqdm import tqdm
-from termcolor import cprint
-from inpututil import safe_input
-
-
 class SimulateAttempts:
     def __init__(self, MainMenu):
         self.menu = MainMenu
@@ -21,7 +14,7 @@ class SimulateAttempts:
             drop_rate = safe_input("Drop rate (e.g. 0.01 for 1/100 or 100 for 1/100):\n", float)
             if drop_rate == 1:
                 print("Drop rate cannot be 1. Please enter a decimal or a whole number.")
-                continue  # Go back to the start of the loop to let the user enter a new number
+                continue
             else:
                 if drop_rate > 1:
                     drop_rate = 1 / drop_rate
