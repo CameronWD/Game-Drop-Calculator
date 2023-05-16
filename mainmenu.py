@@ -33,19 +33,48 @@ class MainMenu:
         pass
 
     def safe_input(self, prompt, conversion_func=None):
-        user_input = input(prompt)
-        if user_input.lower() == "exit":
-            self.exit_program()
-        if user_input.lower() == "menu":
-            self.display()
-        elif conversion_func:
-            try:
-                return conversion_func(user_input)
-            except ValueError:
-                print("Invalid input!")
-                return None
-        else:
-            return user_input
+        readable_error = {
+            'int': 'numbers',
+            'float': 'numbers',
+            'str': 'text'
+        }
+
+        while True:
+            user_input = input(prompt)
+            if user_input.lower() == "exit":
+                self.exit_program()
+            elif user_input.lower() == "menu":
+                self.display()
+            elif conversion_func:
+                try:
+                    converted = conversion_func(user_input)
+                    if isinstance(converted, int) or isinstance(converted, float):
+                        if user_input.isnumeric():
+                            return converted
+                        else:
+                            print(f"Invalid input! - Please enter {readable_error[conversion_func.__name__]}.")
+                    else:
+                        if user_input.isalpha():
+                            return converted
+                        else: print(f"Invalid input! - Please enter {readable_error[conversion_func.__name__]} without special characters or numbers.")
+                except ValueError:
+                    print(f"Invalid input! - Please enter {readable_error[conversion_func.__name__]}.")
+            else:
+                return user_input
+
+        # user_input = input(prompt)
+        # if user_input.lower() == "exit":
+        #     self.exit_program()
+        # if user_input.lower() == "menu":
+        #     self.display()
+        # elif conversion_func:
+        #     try:
+        #         return conversion_func(user_input)
+        #     except ValueError:
+        #         print(f"Invalid input! - Please enter a {conversion_func.__name__}.")
+        #         return None
+        # else:
+        #     return user_input
         
     
     def exit_program(self):
@@ -61,5 +90,7 @@ class MainMenu:
                     print("Warning: boss_stats.json is empty or not properly formatted. Continuing with an empty boss list.")
 
         except FileNotFoundError:
-            pass 
+            print("boss_stats.json not found. Creating a new file now.")
+            with open('boss_stats.json', 'w') as file:
+                pass
 
