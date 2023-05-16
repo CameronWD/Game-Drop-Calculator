@@ -6,20 +6,21 @@ from displaybossstats import DisplayBossStats
 from dropcalculator import DropCalculator
 from termcolor import cprint
 from inpututil import safe_input
+from art import tprint , aprint
 
 class MainMenu:
     def __init__(self):
         self.boss_records = {}
     
     def display(self):
-        cprint("Welcome to the Drop Chance Calculator!", 'light_magenta', attrs=['bold', 'underline'])
+
+        tprint("Drop Chance Calculator!")
         cprint("1. Whats my chance of having a drop by now?", "light_green")
         cprint("2. Simulate drop attempts", "light_cyan")
         cprint("3. Store my boss stats", "light_blue")
         cprint("4. List my boss stats", "light_yellow")
         cprint("5. Exit", "red")
         cprint("Type 'exit' at any time to exit the program.", 'dark_grey')
-        cprint("Type 'menu' at any time to return to the main menu.", "dark_grey")
         return safe_input("What would you like to do? (enter number then press enter): \n", int)
     
     def drop_calculator(self):
@@ -43,6 +44,7 @@ class MainMenu:
         
     def exit_program(self):
         print("Thank you for using Drop Chance Calculator!")
+        aprint("sad face")
         exit()
 
     def load_boss_records(self):
