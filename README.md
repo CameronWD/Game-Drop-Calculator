@@ -1,6 +1,13 @@
 # T1A3 - Terminal Application
 # **Drop Chance Calculator**
 
+## Important Links
+
+* [GitHubRepo](https://github.com/CameronWD/T1A3)
+* [TrelloBoard](https://trello.com/b/3npKVqHD/t1a3-drop-rate-calculator)
+* [Presentation]()
+* [StyleGuide](https://peps.python.org/pep-0008/)
+
 ## Introduction
 
 Welcome to my Python program, *Drop Chance Calculator*. 
