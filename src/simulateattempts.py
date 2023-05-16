@@ -4,27 +4,38 @@ from termcolor import cprint
 from inpututil import safe_input
 
 
-class SimulateAttempts:
+import random
+from tqdm import tqdm
+from termcolor import cprint
+from inpututil import safe_input
 
+
+class SimulateAttempts:
     def __init__(self, MainMenu):
         self.menu = MainMenu
 
     def calculate(self):
         boss_name = safe_input("Boss name:\n")
 
-        drop_rate = safe_input("Drop rate (e.g. 0.01 for 1/100 or 100 for 1/100):\n")
-        try:
-            drop_rate = float(drop_rate)
-            if drop_rate > 1:
-                drop_rate = 1 / drop_rate
-        except ValueError:
-            print("Invalid input for drop rate. Please enter a decimal or a whole number.")
-            return
+        while True:
+            drop_rate = safe_input("Drop rate (e.g. 0.01 for 1/100 or 100 for 1/100):\n", float)
+            if drop_rate == 1:
+                print("Drop rate cannot be 1. Please enter a decimal or a whole number.")
+                continue  # Go back to the start of the loop to let the user enter a new number
+            else:
+                if drop_rate > 1:
+                    drop_rate = 1 / drop_rate
+                break
 
-        simulated_successful_occurrences = int(input("Simulated successful occurrences (1-1000):\n"))
-        
+        while True:
+            simulated_successful_occurrences = safe_input("Simulated successful occurrences (1-100000000):\n", int)
+            if simulated_successful_occurrences <= 0:
+                print("Invalid input for simulated successful occurrences. Please enter a positive whole number.")
+            else:
+                break
+
         attempts_per_success = []
-        for _ in tqdm(range(simulated_successful_occurrences)):
+        for simulation in tqdm(range(simulated_successful_occurrences)):
             attempts = 0
             while random.random() >= drop_rate:
                 attempts += 1
@@ -34,9 +45,8 @@ class SimulateAttempts:
         max_attempts = max(attempts_per_success)
         avg_attempts = sum(attempts_per_success) / len(attempts_per_success)
 
-#variable/private
-
         cprint(f"Program successfully got the drop {simulated_successful_occurrences} times from {boss_name}.", 'light_cyan')
         cprint(f"The fewest attempts between drops was {min_attempts} and the most was {max_attempts}.", 'light_cyan')
         cprint(f"Average attempts to be successful was: {avg_attempts:.3f}", 'light_cyan')
         safe_input("Press any key to return to main menu\n")
+
