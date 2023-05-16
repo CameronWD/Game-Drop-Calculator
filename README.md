@@ -3,17 +3,17 @@
 
 ## Introduction
 
-Welcome to my Python program, "Drop Chance Calculator". 
+Welcome to my Python program, *Drop Chance Calculator*. 
 
 Designed to provide simple and easy to use utility for gamers who frequently engage in boss fights where luck is an aspect of getting rewards. If you are someone who has wondered how lucky or unlucky you are currently, this program may provide you with some insight. 
 
 Before diving into the functionality of the program, it is important to clarify some terminologies and concepts that are frequent within the world of video games. 
 
-Kill count: This referes to the number of times a player has defeated a specific boss. This number is important to track as its relation to the odds of recieving certain items helps users gain insight into how lucky they are. 
+**Kill count:** This referes to the number of times a player has defeated a specific boss. This number is important to track as its relation to the odds of recieving certain items helps users gain insight into how lucky they are. 
 
-Drop: A drop is a broad term used for items that are recieved from a boss. Similar words like loot or rewards could also be used. 
+**Drop:** A drop is a broad term used for items that are recieved from a boss. Similar words like loot or rewards could also be used. 
 
-Drop rate: This is the probaiblity of a boss dropping a specific item when defeated. While many games have many differing mechanics surronding this certain assumptions have been made for drop rate calculations in this program. It is assumed that drop rate has no memory or 'bad luck' mechanic. Every kill attempt results in the same chance of recieving the drop. The fancier term being a series of Bernoulli trials. Often these rates can be given as a percentage or out 1/droprate, e.g 5%, 0.05 or 1/20.  Most games have a way to know what the drop rate of an item is. Which is really helpful for our purpose!
+**Drop rate:** This is the probaiblity of a boss dropping a specific item when defeated. While many games have many differing mechanics surronding this certain assumptions have been made for drop rate calculations in this program. It is assumed that drop rate has no memory or 'bad luck' mechanic. Every kill attempt results in the same chance of recieving the drop. The fancier term being a series of Bernoulli trials. Often these rates can be given as a percentage or out 1/droprate, e.g 5%, 0.05 or 1/20.  Most games have a way to know what the drop rate of an item is. Which is really helpful for our purpose!
 
 What draws many gamers to video games is the aspect of chance and earning drops from particular bosses gives an element of earning rewards which can be a satisfying, albeit frustrating at times, gameplay loop. By comparing your kill count in relation to the drop rate and the number of items you have recieved, players are able to learn more about how lucky or unlucky they are. This program allows users to see what percentile of probability they are in relation to their kill count and the drop rate of a specific item. It allows users to simulate recieveing X amount of drops from a boss, displaying the average rate the program recieved drops in addition to the luckiest and unluckiest streaks. Finally, users can store their kill count, boss names, drop rate and succusful occurances too. 
 
@@ -21,7 +21,7 @@ This program is desinged to be simple to use and a little bit of fun.
 
 Best of luck!
 
-## System REquirments
+## System Requirments
 
 - OS: Any that can run Python (more niche OS's may have issues with certain packages running correctly, but this should not affect functionality).
 - Python 3
