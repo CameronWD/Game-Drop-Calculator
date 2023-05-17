@@ -4,7 +4,7 @@
 
 * [GitHub Repo](https://github.com/CameronWD/T1A3)
 * [Trello Board](https://trello.com/b/3npKVqHD/t1a3-drop-rate-calculator)
-* [Presentation](https://youtu.be/WJEf7qiIxBw)
+* [Presentation](https://youtu.be/G-xaN1Gd3Cg)
 * [Slide Deck](ppt/T1A3%20--%20Drop%20Calculator.pdf)
 * [Style Guide Used](https://peps.python.org/pep-0008/)
 * [Help File](#installation-and-running-the-program)
