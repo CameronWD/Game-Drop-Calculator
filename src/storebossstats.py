@@ -24,5 +24,5 @@ class StoreBossStats:
             with open('boss_stats.json', 'w') as file:
                 json.dump({key: value.to_dict() for key, value in self.main.boss_records.items()}, file)
             cprint(f"Boss {boss_name} saved successfully.", "light_green")
-        safe_input("Press any key to return to main menu\n")
+        input("Enter any key to return to main menu\n")
         

@@ -13,7 +13,9 @@ def safe_input(prompt, conversion_func=None):
         if user_input.lower() == "exit":
             cprint("Thank you for using Drop Chance Calculator!", "cyan")
             aprint("sad and confused")
-            exit()  
+            exit()
+        elif user_input.strip() == '':
+            cprint("Invalid input! - Please enter something.", "yellow")
         elif conversion_func:
             try:
                 converted = conversion_func(user_input)

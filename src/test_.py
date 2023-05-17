@@ -3,8 +3,6 @@ from dropcalculator import DropCalculator
 from termcolor import cprint
 from inpututil import safe_input
 
-# test_dropcalculator.py
-
 def test(monkeypatch):
     inputs = iter(['Boss name', 100, 100, ''])
     monkeypatch.setattr('dropcalculator.safe_input', lambda prompt, conversion_func=None: next(inputs, ''))
@@ -29,6 +27,7 @@ def test_drop_calculator_input_error(monkeypatch):
 
     with pytest.raises(ValueError):
         drop_calculator.calculate()
+
 
 
 

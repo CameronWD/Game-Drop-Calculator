@@ -21,7 +21,7 @@ class AttemptSimulator:
                 break
 
         while True:
-            simulated_successful_occurrences = safe_input("Simulated successful occurrences (1-100000000):\n", int)
+            simulated_successful_occurrences = safe_input("Simulating successful occurrences (1-100000000) - large numbers can cause the program to take some time to process(sub 1,000,000 is advised):\n", int)
             if simulated_successful_occurrences <= 0:
                 cprint("Invalid input for simulated successful occurrences. Please enter a positive whole number.", "red", attrs=['bold'])
             else:
@@ -41,5 +41,5 @@ class AttemptSimulator:
         cprint(f"Program successfully got the drop {simulated_successful_occurrences} times from {boss_name}.", 'light_cyan')
         cprint(f"The fewest attempts between drops was {min_attempts} and the most was {max_attempts}.", 'light_cyan')
         cprint(f"Average attempts to be successful was: {avg_attempts:.3f}", 'light_cyan')
-        safe_input("Press any key to return to main menu\n")
+        input("Enter any key to return to main menu\n")
 

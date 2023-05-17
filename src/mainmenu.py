@@ -17,7 +17,7 @@ class MainMenu:
         cprint("1. Whats my chance of having a drop by now?", "light_green")
         cprint("2. Simulate drop attempts", "light_cyan")
         cprint("3. Store my boss stats", "light_blue")
-        cprint("4. List my boss stats", "light_yellow")
+        cprint("4. Display my boss stats", "light_yellow")
         cprint("5. Exit", "red")
         cprint("Type 'exit' at any time to exit the program.", 'dark_grey')
         return safe_input("What would you like to do? (enter number then press enter): \n", int)
