@@ -1,7 +1,11 @@
 # T1A3 - Terminal Application
 # **Drop Chance Calculator**
 
-## Important Links
+# Table of Contents
+
+1. [Links](#ImportantLinks)
+
+## Important Links <a name="ImportantLinks"></a>
 
 * [GitHubRepo](https://github.com/CameronWD/T1A3)
 * [TrelloBoard](https://trello.com/b/3npKVqHD/t1a3-drop-rate-calculator)
