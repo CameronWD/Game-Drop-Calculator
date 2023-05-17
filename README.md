@@ -4,6 +4,12 @@
 # Table of Contents
 
 1. [Links](#ImportantLinks)
+2. [Introduction](#Introduction)
+3. [SystemRequirments](#system-requirments)
+4. [Dependencies](#Dependencies)
+5. [Installation](#Installation)
+6. [How To Use](#how-to-use)
+7. [Tests](#tests)
 
 ## Important Links <a name="ImportantLinks"></a>
 
@@ -11,8 +17,9 @@
 * [TrelloBoard](https://trello.com/b/3npKVqHD/t1a3-drop-rate-calculator)
 * [Presentation]()
 * [StyleGuide](https://peps.python.org/pep-0008/)
+* [Help File]()
 
-## Introduction
+## Introduction <a name="Introduction"></a>
 
 Welcome to my Python program, *Drop Chance Calculator*. 
 
@@ -32,12 +39,12 @@ This program is desinged to be simple to use and a little bit of fun.
 
 Best of luck!
 
-## System Requirments
+## System Requirments <a name="System"></a>
 
 - OS: Any that can run Python (more niche OS's may have issues with certain packages running correctly, but this should not affect functionality).
 - Python 3
 
-## Dependencies
+## Dependencies <a name="Dependencies"></a>
 
 This application requires the following Python packages:
 
@@ -46,7 +53,7 @@ This application requires the following Python packages:
 - tqdm==4.65.0
 - wcwidth==0.2.6
 
-## Installation
+## Installation <a name="Installation"></a>
 
 1. Confirm that your system has Python 3.x or higher. You can download Python from [link](https://www.python.org/) if you do not have it installed. You can confirm your python version in the console by running the following command:
 
@@ -63,7 +70,7 @@ This application requires the following Python packages:
 
     ``` pyton3 main.py ```
 
-## How to use 
+## How to use <a name="How"></a>
 
 After starting the application, you are greeted with the main menu screen. Enter the number that corresponds with the feature you would like to use:
 
@@ -73,7 +80,7 @@ After starting the application, you are greeted with the main menu screen. Enter
 4. **Display Boss Stats:** This function displays the entered boss data in a tabular format. One header table shows the different entered bosses with the kill counts for each one. The second set of tables shows the breakdown per boss, separating individual items within the boss.
 5. **Exit option:** Typing 'exit' anywhere in the program will close it.
 
-## Tests
+## Tests <a name="Test"></a>
 
 ### Test Case 1: Testing the Drop Rate Calculation
 Goal:
