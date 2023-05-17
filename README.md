@@ -89,6 +89,6 @@ Goal: The centerpiece of the program. Imperative that the operations within this
 
 My strategy for my planning was to use a Trello board. I iniitally made a large list of what I wanted to accomplish on the "to do" section. I would move a section to the "doing" section where I would then flesh out what I would be doing. Creating a checklist of tasks I would need to do to complete that particular item. Finally I would move those items into "done" once I had completed the items within the checklist. I had two stretch features I wanted to possibly add if I had lots of time but that did not happen. They are still in the to do section but I was okay not attempting them as it was more important to do what I had correctly first. 
 
-(![Trello Board](docs/TrelloBoard.png))
+![Trello Board](docs/TrelloBoard.png)
 
 
