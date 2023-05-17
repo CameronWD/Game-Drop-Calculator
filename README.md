@@ -47,8 +47,8 @@ This application requires the following Python packages:
 
 ## Installation and Running the Program<a name="Installation"></a>
 
-- [Mac or Linux](helpMacLinux.md)
-- [Windows](helpWindows.md)
+- [Mac or Linux](docs/helpMacLinux.md)
+- [Windows](docs/helpWindows.md)
 
 ## How to use <a name="How"></a>
 
