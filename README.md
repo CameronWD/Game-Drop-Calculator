@@ -53,16 +53,10 @@ This application requires the following Python packages:
 - tqdm==4.65.0
 - wcwidth==0.2.6
 
-## Installation <a name="Installation"></a>
+## Installation and Running the Program<a name="Installation"></a>
 
-1. Confirm that your system has Python 3.x or higher. You can download Python from [link](https://www.python.org/) if you do not have it installed. You can confirm your python version in the console by running the following command:
-
-    ``` python3 --version ```
-2. Download or clone this respository to your local machine.
-
-3. Navigate to the location of the repository on your local system in the terminal.
-
-4. Install the Python packages that are required to run this program using pip. This will install the dependencies listed in the requirements.txt file. 
+- [Mac or Linux](helpMacLinux.md)
+- [Windows](helpWindows.md)
 
     ``` pip install -r requirments.txt ```
 
