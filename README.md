@@ -58,10 +58,6 @@ This application requires the following Python packages:
 - [Mac or Linux](helpMacLinux.md)
 - [Windows](helpWindows.md)
 
-5. You should now be able to run the program from the terminal by running the following command:
-
-    ``` pyton3 main.py ```
-
 ## How to use <a name="How"></a>
 
 After starting the application, you are greeted with the main menu screen. Enter the number that corresponds with the feature you would like to use:
