@@ -14,8 +14,8 @@ class StoreBossStats:
             item_name = safe_input("Enter the name of the item dropped, or 'done' to finish:\n")
             if item_name.lower() == 'done':
                 break
-            item_drop_rate = float(safe_input("Enter the drop rate of the item:\n", float))
-            item_count = int(safe_input(f"How many times have you received {item_name}?\n", int))
+            item_drop_rate = safe_input("Enter the drop rate of the item:\n", float)
+            item_count = safe_input(f"How many times have you received {item_name}?\n", int)
             items_dropped[item_name] = {'count': item_count, 'drop_rate': item_drop_rate}
         save = safe_input("Save? Y/N\n")
         if save.lower() == 'y':
