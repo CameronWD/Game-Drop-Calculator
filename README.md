@@ -15,9 +15,10 @@
 
 * [GitHubRepo](https://github.com/CameronWD/T1A3)
 * [TrelloBoard](https://trello.com/b/3npKVqHD/t1a3-drop-rate-calculator)
-* [Presentation]()
+* [Presentation](https://youtu.be/WJEf7qiIxBw)
+* [Slide Deck](ppt/T1A3%20--%20Drop%20Calculator.pdf)
 * [StyleGuide](https://peps.python.org/pep-0008/)
-* [Help File]()
+* [Help File](#installation-and-running-the-program)
 
 ## Introduction <a name="Introduction"></a>
 
@@ -52,6 +53,8 @@ This application requires the following Python packages:
 - termcolor==2.3.0
 - tqdm==4.65.0
 - wcwidth==0.2.6
+- art==5.9
+- setuptools==59.6.0
 
 ## Installation and Running the Program<a name="Installation"></a>
 
