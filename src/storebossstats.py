@@ -18,6 +18,9 @@ class StoreBossStats:
             item_count = safe_input(f"How many times have you received {item_name}?\n", int)
             items_dropped[item_name] = {'count': item_count, 'drop_rate': item_drop_rate}
         save = safe_input("Save? Y/N\n")
+        while save.lower() not in ['y', 'n']:
+            cprint("Invalid option. Please enter 'Y' to save or 'N' to cancel", "red")
+            save = safe_input("Save? Y/N\n")
         if save.lower() == 'y':
             boss_instance = BossStore(boss_name, kill_attempts, items_dropped)
             self.main.boss_records[boss_name] = boss_instance
