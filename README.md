@@ -58,8 +58,6 @@ This application requires the following Python packages:
 - [Mac or Linux](helpMacLinux.md)
 - [Windows](helpWindows.md)
 
-    ``` pip install -r requirments.txt ```
-
 5. You should now be able to run the program from the terminal by running the following command:
 
     ``` pyton3 main.py ```
