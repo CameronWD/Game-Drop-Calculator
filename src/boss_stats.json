@@ -1,1 +1,1 @@
-{"QBD": {"name": "QBD", "kill_attempts": 250, "items_dropped": {"hield": {"count": 0, "drop_rate": 500.0}}}, "-1": {"name": "-1", "kill_attempts": 500, "items_dropped": {"Shield": {"count": 0, "drop_rate": 512.0}}}}
+{"QBD": {"name": "QBD", "kill_attempts": 250, "items_dropped": {"hield": {"count": 0, "drop_rate": 500.0}}}, "-1": {"name": "-1", "kill_attempts": 500, "items_dropped": {"Shield": {"count": 0, "drop_rate": 512.0}}}, "0": {"name": "0", "kill_attempts": 0, "items_dropped": {"0": {"count": 0, "drop_rate": 0.0}}}}

@@ -13,7 +13,7 @@ class AttemptSimulator:
         while True:
             drop_rate = safe_input("Drop rate (e.g. 0.01 for 1/100 or 100 for 1/100):\n", float)
             if drop_rate == 1:
-                print("Drop rate cannot be 1. Please enter a decimal or a whole number.")
+                cprint("Drop rate cannot be 1. Please enter a decimal or a whole number.", "red", attrs=['bold'])
                 continue
             else:
                 if drop_rate > 1:
@@ -23,7 +23,7 @@ class AttemptSimulator:
         while True:
             simulated_successful_occurrences = safe_input("Simulated successful occurrences (1-100000000):\n", int)
             if simulated_successful_occurrences <= 0:
-                print("Invalid input for simulated successful occurrences. Please enter a positive whole number.")
+                cprint("Invalid input for simulated successful occurrences. Please enter a positive whole number.", "red", attrs=['bold'])
             else:
                 break
 

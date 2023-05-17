@@ -1,4 +1,5 @@
 from mainmenu import MainMenu
+from termcolor import cprint
 
 def main():
     try:
@@ -18,7 +19,7 @@ def main():
             elif choice == 5:
                 main_menu.exit_program()
             else:
-                print('Invalid choice. Please enter a number from 1 to 5.')
+                cprint('Invalid choice. Please enter a number from 1 to 5.', 'red', attrs=['bold'])
                 
     except Exception as exception:
         print("An unexpected error occured:", str(exception))

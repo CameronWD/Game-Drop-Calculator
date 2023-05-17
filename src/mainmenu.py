@@ -45,10 +45,10 @@ class MainMenu:
                 try:
                     self.boss_records.update({key: BossStore.from_dict(value) for key, value in json.load(file).items()})
                 except json.decoder.JSONDecodeError:
-                    print("Warning: boss_stats.json is empty or not properly formatted. Will create a new one now.")
+                    cprint("Warning: boss_stats.json is empty or not properly formatted. Will create a new one now.", "red" ,attrs=['bold'])
 
         except FileNotFoundError:
-            print("boss_stats.json not found. Creating a new file now.")
+            cprint("boss_stats.json not found. Creating a new file now.", "red", attrs=["bold"])
             with open('boss_stats.json', 'w') as file:
                 pass
 

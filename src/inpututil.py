@@ -11,7 +11,7 @@ def safe_input(prompt, conversion_func=None):
     while True:
         user_input = input(prompt)
         if user_input.lower() == "exit":
-            print("Thank you for using Drop Chance Calculator!", "cyan")
+            cprint("Thank you for using Drop Chance Calculator!", "cyan")
             aprint("sad and confused")
             exit()  
         elif conversion_func:
@@ -23,8 +23,8 @@ def safe_input(prompt, conversion_func=None):
                             raise ValueError(f"Invalid input! - Please enter positive {readable_error[conversion_func.__name__]}.")
                         return converted
                     else:
-                        print(f"Invalid input! - Please enter positive {readable_error[conversion_func.__name__]}.")
+                        cprint(f"Invalid input! - Please enter positive {readable_error[conversion_func.__name__]}.", "yellow")
             except ValueError as exception:
-                print(f"Invalid input! - Please enter positive {readable_error[conversion_func.__name__]}.")
+                cprint(f"Invalid input! - Please enter positive {readable_error[conversion_func.__name__]}.", "yellow")
         else:
             return user_input
