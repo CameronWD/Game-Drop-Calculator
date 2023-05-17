@@ -19,8 +19,9 @@ def main():
                 main_menu.exit_program()
             else:
                 print('Invalid choice. Please enter a number from 1 to 5.')
+                
     except Exception as exception:
-        print("An unexpected error occured: ", str(exception))
+        print("An unexpected error occured:", str(exception))
 
 if __name__ == "__main__":
     main()

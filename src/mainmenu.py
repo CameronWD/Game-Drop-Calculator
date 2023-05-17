@@ -13,7 +13,6 @@ class MainMenu:
         self.boss_records = {}
     
     def display(self):
-
         tprint("Drop Chance Calculator!")
         cprint("1. Whats my chance of having a drop by now?", "light_green")
         cprint("2. Simulate drop attempts", "light_cyan")
@@ -28,18 +27,15 @@ class MainMenu:
 
     def simulate_attempts(self):
         AttemptSimulator(self).calculate()
-        pass
 
     def store_boss_stats(self):
         StoreBossStats(self).execute()
-        pass
 
     def display_boss_stats(self):
         BossStatDisplayer(self.boss_records).execute()
-        pass
         
     def exit_program(self):
-        print("Thank you for using Drop Chance Calculator!")
+        cprint("Thank you for using Drop Chance Calculator!" , "cyan")
         aprint("sad face")
         exit()
 

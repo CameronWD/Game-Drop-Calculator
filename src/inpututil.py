@@ -1,4 +1,5 @@
 from art import aprint
+from termcolor import cprint
 
 def safe_input(prompt, conversion_func=None):
     readable_error = {
@@ -10,10 +11,9 @@ def safe_input(prompt, conversion_func=None):
     while True:
         user_input = input(prompt)
         if user_input.lower() == "exit":
-            print("Thank you for using Drop Chance Calculator!")
+            print("Thank you for using Drop Chance Calculator!", "cyan")
             aprint("sad and confused")
-            exit()
-            
+            exit()  
         elif conversion_func:
             try:
                 converted = conversion_func(user_input)

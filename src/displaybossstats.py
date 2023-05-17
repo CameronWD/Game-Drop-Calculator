@@ -6,15 +6,12 @@ class BossStatDisplayer:
         self.boss_records = boss_records
 
     def execute(self):
-
-        # Creates a table that has each boss, the kill count and the total number of drops
         table = PrettyTable(["Boss", "Kill count", "Total drops"])
         for boss in self.boss_records.values():
             total_drops = sum(item['count'] for item in boss.items_dropped.values())
             table.add_row([boss.name, boss.kill_attempts, total_drops])
         cprint(table, "light_yellow")
 
-        # Create table for each boss's item drops
         for boss in self.boss_records.values():
             cprint(f"\nBoss: {boss.name}, Kill count: {boss.kill_attempts}", "light_yellow", attrs=["bold"])
             item_table = PrettyTable(["Item dropped", "Count", "Drop rate"])

@@ -4,8 +4,8 @@ from termcolor import cprint
 from inpututil import safe_input
 
 class AttemptSimulator:
-    def __init__(self, MainMenu):
-        self.menu = MainMenu
+    def __init__(self, main_menu):
+        self.menu = main_menu
 
     def calculate(self):
         boss_name = safe_input("Boss name:\n")
