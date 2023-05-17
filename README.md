@@ -76,10 +76,19 @@ Goal: Test the drop calculator section works correctly
 ### Test Case 3: Main Menu
 Goal: The centerpiece of the program. Imperative that the operations within this part of the code work as expected.
 
-* 1. Test 2.1: Checks that the boss_stats.json is present in the folder and that if it is not, it will be created. It's important to check this file is there as the display feature aims to access this file. This process will then create a new one if none is found.
+* Test 2.1: Checks that the boss_stats.json is present in the folder and that if it is not, it will be created. It's important to check this file is there as the display feature aims to access this file. This process will then create a new one if none is found.
      Input: Simulates that boss_stats.json has not been found using side_effect FileNotFoundError()
      Output: "boss_stats.json not found. Creating a new file now." - tests that cprint functions correctly
 
-* 2. Test 2.2: This test ensures that the main menu options are called correctly. Simulating user input and then checking the correct method is output
+* Test 2.2: This test ensures that the main menu options are called correctly. Simulating user input and then checking the correct method is output
      Input: Selecting option 1 by entering one
      Output: Display method is to return one that would open the drop calculator
+
+
+### Development Plan Managemnet 
+
+My strategy for my planning was to use a Trello board. I iniitally made a large list of what I wanted to accomplish on the "to do" section. I would move a section to the "doing" section where I would then flesh out what I would be doing. Creating a checklist of tasks I would need to do to complete that particular item. Finally I would move those items into "done" once I had completed the items within the checklist. I had two stretch features I wanted to possibly add if I had lots of time but that did not happen. They are still in the to do section but I was okay not attempting them as it was more important to do what I had correctly first. 
+
+(![Trello Board](docs/TrelloBoard.png))
+
+
